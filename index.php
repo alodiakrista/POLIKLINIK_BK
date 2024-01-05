@@ -24,17 +24,22 @@ include_once("koneksi.php");
 
 <body>
     <!-- Responsive navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #87CEEB ;">
-    <div class="container px-5">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#F08080">
+    <div class="container px-4">
         <a class="navbar-brand" href="index.php">
             <img src="dist/img/clinic.png" alt="Logo" height="30" class="d-inline-block align-top me-2">
-            Sistem Informasi Poliklinik UDINUS
+            <span style="color: #fff; font-weight: bold;">Poliklinik UDINUS</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+            </ul>
+        </div>
     </div>
 </nav>
+
 
 <?php 
     if (isset($_GET['page'])) {
@@ -51,102 +56,121 @@ include_once("koneksi.php");
 ?>
 
         <!-- Header-->
-        <header class="py-5" style="background-color: #87CEEB ;"> <!-- Ubah Color Banner disini -->
-        <div class="container px-5">
-            <div class="row gx-5 justify-content-center">
-                <div class="col-lg-6">
-                    <div class="text-center my-5">
-                        <h1 class="display-5 fw-bolder text-white mb-2">Sistem Temu Janji <br>Pasien - Dokter</h1>
-                        <p class="lead text-white-50 mb-4">Bimbingan Karir Web Developer</p>
-                    </div>
+        <header class="py-5" style="background-color:  #ADD8E6; border-bottom: 5px solid #ADD8E6;"> <!-- Change Color Banner and Add Border Here -->
+    <div class="container px-5" style="border-radius: 10px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);"> <!-- Add Border Radius and Box Shadow to the Container -->
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-6">
+                <div class="text-center my-5">
+                    <h1 class="display-4 fw-bold text-white mb-2">Sistem Temu Janji <br>DOKTER-PASIEN</h1> <!-- Change Heading Text and Font Size -->
+                    <p class="lead text-white-50 mb-5">Bimbingan Karier Web Developer</p> <!-- Change Subtitle Text -->
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+</header>
+
+
     <!-- Features section-->
-    <section class="py-5 border-bottom" id="features">
-        <div class="container px-5 my-5">
-            <div class="row g-5">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="feature bg-info bg-gradient text-white rounded-3 mb-3"><i class="bi bi-person"></i></div>
-                    <h2 class="h4 fw-bolder">Login Sebagai Admin</h2>
-                    <p>Apabila Anda adalah seorang Admin, silahkan Login terlebih dahulu untuk mengelola data website!</p>
-                    <a class="text-decoration-none" href="index.php?page=loginAdmin">
-                        Klik Link Berikut
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="feature bg-info bg-gradient text-white rounded-3 mb-3"><i class="bi bi-person-circle"></i></div>
-                    <h2 class="h4 fw-bolder">Login Sebagai Dokter</h2>
-                    <p>Apabila Anda adalah seorang Dokter, silahkan Login terlebih dahulu untuk memulai melayani Pasien!</p>
-                    <a class="text-decoration-none" href="index.php?page=loginDokter">
-                        Klik Link Berikut
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="feature bg-info bg-gradient text-white rounded-3 mb-3"><i class="bi bi-person-plus"></i></div>
-                    <h2 class="h4 fw-bolder">Login Sebagai Pasien</h2>
-                    <p>Apabila Anda adalah seorang Pasien, silahkan Login terlebih dahulu untuk mulai menggunakan layanan kami!</p>
-                    <a class="text-decoration-none" href="index.php?page=loginPasien">
-                        Klik Link Berikut
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Testimonials section-->
-    <section class="py-5 border-bottom">
-        <div class="container px-5 my-5 px-5">
-            <div class="text-center mb-5">
-                <h2 class="fw-bolder">Testimoni Pasien</h2>
-                <p class="lead mb-0">Para Pasien yang Setia</p>
-            </div>
-            <div class="row gx-5 justify-content-center">
-                <div class="col-lg-6">
-                    <!-- Testimonial 1-->
-                    <div class="card mb-4">
-                        <div class="card-body p-4">
-                            <div class="d-flex">
-                                <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
-                                <div class="ms-4">
-                                    <p class="mb-1">Pelayanan pada situs web ini sangat efisien dan sederhana. Seluruh riwayat, termasuk catatan obat, terdokumentasi secara komprehensif. Biaya pelayanan terjangkau, dengan dokter yang ramah, secara keseluruhan sangat memuaskan!</p>
-                                    <div class="small text-muted">- Alo, Semarang</div>
-                                </div>
-                            </div>
-                        </div>
+    <section class="py-5 border-bottom" id="features" style="background-color: #FFFFFF;">
+    <div class="container px-5 my-5">
+        <div class="row g-5">
+            <div class="col-lg-4 mb-5">
+                <div class="card" style="background-color: #ADD8E6; box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);">
+                    <div class="card-body text-center">
+                        <div class="feature mb-3"><i class="bi bi-person"></i></div>
+                        <h2 class="h4 fw-bolder">Login Sebagai Admin</h2>
+                        <p>Jika Anda adalah seorang Admin, silakan Login untuk mengelola data website!</p>
+                        <a class="text-decoration-none" href="index.php?page=loginAdmin">
+                            Klik Link Berikut
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
                     </div>
-                    <!-- Testimonial 2-->
-                    <div class="card">
-                        <div class="card-body p-4">
-                            <div class="d-flex">
-                                <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
-                                <div class="ms-4">
-                                    <p class="mb-1">Sebelum saya menemukan situs web ini, saya belum pernah merasakan kemudahan dalam mendapatkan perawatan medis. Antarmuka pengguna yang sederhana dan kehadiran dokter membuat pengalaman berobat menjadi lebih menyenangkan!</p>
-                                    <div class="small text-muted">- Tata, Semarang</div>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <div class="card" style="background-color: #ADD8E6; box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);">
+                    <div class="card-body text-center">
+                        <div class="feature mb-3"><i class="bi bi-person-circle"></i></div>
+                        <h2 class="h4 fw-bolder">Login Sebagai Dokter</h2>
+                        <p>Jika Anda adalah seorang Dokter, silakan Login untuk memulai melayani Pasien!</p>
+                        <a class="text-decoration-none" href="index.php?page=loginDokter">
+                            Klik Link Berikut
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <div class="card" style="background-color:#ADD8E6; box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);">
+                    <div class="card-body text-center">
+                        <div class="feature mb-3"><i class="bi bi-person-plus"></i></div>
+                        <h2 class="h4 fw-bolder">Login Sebagai Pasien</h2>
+                        <p>Jika Anda adalah seorang Pasien, silakan Login untuk mulai menggunakan layanan kami!</p>
+                        <a class="text-decoration-none" href="index.php?page=loginPasien">
+                            Klik Link Berikut
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Testimonials section-->
+<section class="py-5 border-bottom" style="background-color: #FFFFFF;">
+    <div class="container px-5 my-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bolder text-dark">Pengalaman Pasien Bersama Kami</h2>
+            <p class="lead text-dark mb-0">Apa yang Mereka Katakan</p>
+        </div>
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-8">
+                <div class="row">
+                    <!-- Testimonial 1 (left) -->
+                    <div class="col-lg-6">
+                        <div class="card bg-light border-0 mb-4 p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-2"></i></div>
+                                <div class="ms-4">
+                                    <p class="mb-1 text-dark">Situs web ini memberikan pelayanan yang sangat baik. Saya merasa dihargai dan mendapat perhatian maksimal dari tim medis. Saya sungguh terbantu!</p>
+                                    <div class="small text-muted">- Tita, Semarang</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 (right) -->
+                    <div class="col-lg-6">
+                        <div class="card bg-light border-0 p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-2"></i></div>
+                                <div class="ms-4">
+                                    <p class="mb-1 text-dark">Saya senang menemukan situs web ini. Antarmuka pengguna yang ramah membuat segala proses menjadi mudah. Terima kasih atas pengalaman yang menyenangkan!</p>
+                                    <div class="small text-muted">- Citra, Semarang</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
     <!-- Footer-->
-    <footer class="main-footer px-4 py-2">
-        <strong>Copyright ©
-            <script>
-                document.write(new Date().getFullYear())
-            </script>
-            <a href="https://bengkelkoding.dinus.ac.id/">Bengkel Koding</a>.
-        </strong>
-        All rights reserved.
-        <div class="float-right d-none d-sm-inline-block">
-            <b>Version</b> 1.0.0
-        </div>
-    </footer>
+    <footer class="main-footer px-4 py-2" style="background-color: #F08080; color: #fff; text-align: center;">
+    <strong>
+        Copyright ©
+        <script>
+            document.write(new Date().getFullYear())
+        </script>
+        <a href="https://bengkelkoding.dinus.ac.id/" style="color: #fff;">Bengkel Koding</a>.
+    </strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block" style="color: #fff;">
+        <b>Version</b> 1.0.0
+    </div>
+</footer>
     <?php
         }
     ?>
